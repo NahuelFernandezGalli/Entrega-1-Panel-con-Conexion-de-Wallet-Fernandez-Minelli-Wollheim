@@ -1,4 +1,4 @@
-import { erc20Abi, type Address } from 'viem';
+import { erc20Abi, zeroAddress, type Address } from 'viem';
 import { useReadContracts } from 'wagmi';
 import { sepolia } from 'wagmi/chains';
 
@@ -29,7 +29,7 @@ export function useErc20Summary(
         address: token,
         abi: erc20Abi,
         functionName: 'balanceOf',
-        args: [holder ?? '0x0000000000000000000000000000000000000000'],
+        args: [holder ?? zeroAddress],
         chainId: sepolia.id,
       },
     ],
