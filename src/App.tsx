@@ -6,8 +6,8 @@ export default function App() {
   return (
     <main className="app">
       <header className="app-header">
-        <h1>Entrega 1 — Panel Sepolia</h1>
-        <p className="subtitle">Taller 2 Blockchain · ORT</p>
+        <h1>Taller de Tecnologías 2 - Panel Sepolia</h1>
+        <p className="subtitle">Realizado por: Nahuel Fernandez, Agustina Minelli y Federico Wollheim</p>
       </header>
       <ConnectGate>
         <AccountPanel />
