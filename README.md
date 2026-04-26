@@ -127,7 +127,7 @@ npm run preview   # previsualizar el build de producción
 npm run lint      # linter ESLint
 ```
 
-### Verificación requerida por la rúbrica
+### Verificación
 
 ```bash
 npx tsc --noEmit  # debe ejecutarse sin errores de TypeScript
