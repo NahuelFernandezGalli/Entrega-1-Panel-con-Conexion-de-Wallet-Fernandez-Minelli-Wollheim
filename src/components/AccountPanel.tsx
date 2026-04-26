@@ -1,7 +1,6 @@
 import { useAccount, useBalance, useBlockNumber, useEnsName } from 'wagmi';
 import { mainnet, sepolia } from 'wagmi/chains';
-import { formatEther } from 'viem';
-import { formatAddress } from '../lib/format';
+import { formatAddress, formatBalance } from '../lib/format';
 
 export function AccountPanel() {
   const { address } = useAccount();
@@ -12,7 +11,7 @@ export function AccountPanel() {
   if (!address) return null;
 
   const identity = ensName ?? formatAddress(address);
-  const eth = balance ? Number(formatEther(balance.value)).toFixed(4) : '…';
+  const eth = balance ? formatBalance(balance.value, balance.decimals) : '…';
   const block = blockNumber !== undefined ? blockNumber.toString() : '…';
 
   return (
